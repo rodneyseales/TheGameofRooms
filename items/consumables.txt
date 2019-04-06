@@ -1,0 +1,2 @@
+Name;Description;HPBonus;MPBonus
+Potion;A small healing potion;30;0
