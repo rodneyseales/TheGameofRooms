@@ -8,9 +8,14 @@ fun main() {
 
     val potion = Item("Potion", "A small healing potion")
     val elixir = Consumable("Elixir", "A potion that cures all", 100, 100)
+    var helmet = Armor("Rusty Helmet", "A helmet that may cause injuries", 5, -3)
+
+
 
     potion.displayItem()
     elixir.displayItem()
+    helmet.displayItem()
+
 
     wr.setExits(Room.DIRECTION.NORTH, dr)
     wr.setExits(Room.DIRECTION.WEST, rr)
