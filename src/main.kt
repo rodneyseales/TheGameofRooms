@@ -9,12 +9,37 @@ fun main() {
     val potion = Item("Potion", "A small healing potion")
     val elixir = Consumable("Elixir", "A potion that cures all", 100, 100)
     var helmet = Armor("Rusty Helmet", "A helmet that may cause injuries", 5, -3)
+    var sword = Weapon("Short Sword", "A small tiny sword", 10, 0)
 
 
 
     potion.displayItem()
     elixir.displayItem()
     helmet.displayItem()
+    sword.displayItem()
+
+    println("---------------------------------------------------")
+
+    var item: List<Item> = listOf(potion, elixir, helmet, sword)
+
+    for (i in item) {
+        i.displayItem()
+    }
+
+    println("---------------------------------------------------")
+
+    for (i in item) {
+        if( i is Armor) {
+            i.displayItem()
+        }
+    }
+    println("---------------------------------------------------")
+
+    for (i in item) {
+        if( i is Weapon || i is Consumable) {
+            i.displayItem()
+        }
+    }
 
 
     wr.setExits(Room.DIRECTION.NORTH, dr)
