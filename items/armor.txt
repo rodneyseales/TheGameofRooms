@@ -1,0 +1,2 @@
+Name;Description;DexBonus;DefBonus
+Helmet;A rusty helmet;5;-3

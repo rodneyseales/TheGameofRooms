@@ -1,0 +1,2 @@
+Name;Description;strBonus;defBonus
+short sword;A small sword;12;0
