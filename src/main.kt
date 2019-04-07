@@ -1,3 +1,4 @@
+import java.math.BigInteger
 
 fun main() {
     println("This is how it always begins...")
@@ -6,7 +7,7 @@ fun main() {
     val rr = Room("Rest Room", "A room for... well... you know.")
     val ar = Room("Armor Room", "A room full of armor")
 
-    val potion = Item("Potion", "A small healing potion")
+    val potion = Consumable("Potion", "A small healing potion", 10, 10)
     val elixir = Consumable("Elixir", "A potion that cures all", 100, 100)
     var helmet = Armor("Rusty Helmet", "A helmet that may cause injuries", 5, -3)
     var sword = Weapon("Short Sword", "A small tiny sword", 10, 0)
@@ -20,7 +21,12 @@ fun main() {
 
     println("---------------------------------------------------")
 
-    var item: List<Item> = listOf(potion, elixir, helmet, sword)
+    var item: MutableList<Item> = mutableListOf()
+
+    item.add(potion)
+    item.add(elixir)
+    item.add(helmet)
+    item.add(sword)
 
     for (i in item) {
         i.displayItem()
@@ -40,6 +46,11 @@ fun main() {
             i.displayItem()
         }
     }
+    item.add(potion)
+
+    for (i in item) {
+        i.displayItem()
+    }
 
 
     wr.setExits(Room.DIRECTION.NORTH, dr)
@@ -51,3 +62,4 @@ fun main() {
     rr.setExits(Room.DIRECTION.EAST, wr)
 
 }
+

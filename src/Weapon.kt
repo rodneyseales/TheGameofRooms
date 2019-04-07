@@ -2,7 +2,7 @@ class Weapon(_name: String, _description: String, var strBonus: Int, var defBonu
 
     override fun displayItem() {
         super.displayItem()
-        println("Strenth Bonus: $strBonus")
+        println("Strength Bonus: $strBonus")
         println("Defense Bonus: $defBonus")
     }
 }
