@@ -1,4 +1,5 @@
 import java.math.BigInteger
+import kotlin.math.absoluteValue
 
 fun main() {
     println("This is how it always begins...")
@@ -12,45 +13,27 @@ fun main() {
     var helmet = Armor("Rusty Helmet", "A helmet that may cause injuries", 5, -3)
     var sword = Weapon("Short Sword", "A small tiny sword", 10, 0)
 
+    var item = Inventory()
+
+    var ih = InterfaceHandler()
+
+    ih.directionMenu()
 
 
-    potion.displayItem()
-    elixir.displayItem()
-    helmet.displayItem()
-    sword.displayItem()
+
 
     println("---------------------------------------------------")
 
-    var item: MutableList<Item> = mutableListOf()
+    //var item = HashMap<Item, Int>()
 
-    item.add(potion)
-    item.add(elixir)
-    item.add(helmet)
-    item.add(sword)
+    item.addItem(potion)
+    item.addItem(potion)
+    item.addItem(potion)
+    item.addItem(elixir)
+    item.addItem(sword)
+    item.addItem(helmet)
 
-    for (i in item) {
-        i.displayItem()
-    }
 
-    println("---------------------------------------------------")
-
-    for (i in item) {
-        if( i is Armor) {
-            i.displayItem()
-        }
-    }
-    println("---------------------------------------------------")
-
-    for (i in item) {
-        if( i is Weapon || i is Consumable) {
-            i.displayItem()
-        }
-    }
-    item.add(potion)
-
-    for (i in item) {
-        i.displayItem()
-    }
 
 
     wr.setExits(Room.DIRECTION.NORTH, dr)
