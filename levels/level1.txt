@@ -1,0 +1,6 @@
+Weapon Room:A room full of weapons
+Dining Room:A room for dining
+Armory:A room full of armor
+Hallway:A simple Hallway
+Rest Room:A room for... well... you know!!
+Bed Room:A room for resting

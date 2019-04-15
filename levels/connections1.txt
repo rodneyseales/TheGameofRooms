@@ -1,0 +1,5 @@
+Weapon Room:N:Dining Room
+Dining Room:N:Armory
+Dining Room:E:Hallway
+Hallway:E:Rest Room
+Rest Room:N:Bed Room
